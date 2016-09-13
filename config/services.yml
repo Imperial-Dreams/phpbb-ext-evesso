@@ -1,8 +1,8 @@
 services:
     auth.provider.oauth.service.evesso:
-        class: cyerus\evesso\core\evesso
+        class: imperialdreams\evesso\core\evesso
         arguments:
-            - @config
-            - @request
+            - '@config'
+            - '@request'
         tags:
             - { name: auth.provider.oauth.service }

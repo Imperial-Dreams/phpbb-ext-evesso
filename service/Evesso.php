@@ -40,7 +40,7 @@ class Evesso extends AbstractService
     }
 	
     /**
-     * @return \OAuth\Common\Http\Uri\UriInterface
+     * @return UriInterface
      */
     public function getAuthorizationEndpoint()
     {
@@ -48,7 +48,7 @@ class Evesso extends AbstractService
     }
 
     /**
-     * @return \OAuth\Common\Http\Uri\UriInterface
+     * @return UriInterface
      */
     public function getAccessTokenEndpoint()
     {
@@ -73,7 +73,7 @@ class Evesso extends AbstractService
         $token = new StdOAuth2Token();
 
         $token->setAccessToken( $data['access_token'] );
-        $token->setLifeTime( $data['expires_in'] );
+        $token->setLifetime( $data['expires_in'] );
 
         if( isset($data['refresh_token'] ) ) {
             $token->setRefreshToken( $data['refresh_token'] );

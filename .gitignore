@@ -1,5 +1,7 @@
 # Created by http://www.gitignore.io
-
+.idea
+vendor
+composer.lock
 ### NetBeans ###
 nbproject/
 nbproject/private/
